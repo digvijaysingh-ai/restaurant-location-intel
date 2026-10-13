@@ -1,0 +1,43 @@
+name: Keep demo awake
+
+# Streamlit Community Cloud puts apps to sleep after ~12 hours without traffic,
+# and a plain HTTP request does not wake them. Open the app in a real browser,
+# press the wake-up button if the sleep page is showing, and wait for the app.
+
+on:
+  schedule:
+    - cron: "17 */8 * * *"
+  workflow_dispatch:
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Open the demo and wake it if asleep
+        env:
+          APP_URL: https://restaurant-location-intel.streamlit.app
+        run: |
+          python - <<'EOF'
+          import os
+          from playwright.sync_api import sync_playwright
+
+          with sync_playwright() as p:
+              page = p.chromium.launch().new_page()
+              page.goto(os.environ["APP_URL"], wait_until="domcontentloaded", timeout=60_000)
+              page.wait_for_timeout(5_000)
+              wake = page.get_by_role("button", name="Yes, get this app back up!")
+              if wake.count():
+                  print("App was asleep: waking it")
+                  wake.click()
+                  page.wait_for_timeout(90_000)
+              else:
+                  print("App was awake")
+          EOF

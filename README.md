@@ -21,7 +21,9 @@
 > Independent portfolio and research project. Figures are model estimates,
 > not financial or investment advice. See [DISCLAIMER.md](DISCLAIMER.md).
 
-![Home page: what the tool is, live coverage, how to use it](docs/screenshots/home.png)
+![Walkthrough: pick a scenario, read the top zone and shortlist, open the map](docs/screenshots/walkthrough.gif)
+
+<sub>If the live demo shows a "gone to sleep" page, press the button and give it about a minute.</sub>
 
 ## App tour
 
