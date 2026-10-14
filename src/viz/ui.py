@@ -12,7 +12,7 @@ import streamlit as st
 from . import theme
 
 ROOT = Path(__file__).resolve().parents[2]
-REPO_URL = "https://github.com/Digvijay-classai/restaurant-location-intel"
+REPO_URL = "https://github.com/digvijaysingh-ai/restaurant-location-intel"
 LIVE_URL = "https://restaurant-location-intel.streamlit.app"
 
 # Analysis inputs that must survive switching between pages. Streamlit

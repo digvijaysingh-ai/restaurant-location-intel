@@ -4,13 +4,14 @@
 > Every ~0.74 km² zone gets unit economics (revenue, costs, payback with downside and upside cases)
 > and a 0-100 composite score, ranked economics-first, with the source of every input shown.
 
-[![CI](https://github.com/Digvijay-classai/restaurant-location-intel/actions/workflows/ci.yml/badge.svg)](https://github.com/Digvijay-classai/restaurant-location-intel/actions/workflows/ci.yml)
+[![CI](https://github.com/digvijaysingh-ai/restaurant-location-intel/actions/workflows/ci.yml/badge.svg)](https://github.com/digvijaysingh-ai/restaurant-location-intel/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
 ![Streamlit](https://img.shields.io/badge/streamlit-1.50%2B-ff4b4b.svg)
 ![Code: MIT](https://img.shields.io/badge/code-MIT-green.svg)
 ![Data: ODbL + CC BY 4.0](https://img.shields.io/badge/data-ODbL%20%2B%20CC%20BY%204.0-blue.svg)
 
 **[Live demo](https://restaurant-location-intel.streamlit.app)** ·
+**[Case study](https://djcrafted.com/work/location-intelligence/)** ·
 **[Methodology](docs/methodology.md)** ·
 **[Architecture](docs/architecture.md)** ·
 **[Data dictionary](docs/data_dictionary.md)** ·
@@ -81,7 +82,7 @@ blended with a model.
 ## Quick start
 
 ```bash
-git clone https://github.com/Digvijay-classai/restaurant-location-intel.git
+git clone https://github.com/digvijaysingh-ai/restaurant-location-intel.git
 cd restaurant-location-intel
 
 python -m venv .venv && source .venv/bin/activate
